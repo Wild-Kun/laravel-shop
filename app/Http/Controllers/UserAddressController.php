@@ -14,6 +14,9 @@ class UserAddressController extends Controller
         ]);
     }
 
+    /*
+     * 添加页面
+     */
     public function create(){
         return view('user_address.create_and_edit',['address'=>new UserAddress()]);
     }
@@ -30,4 +33,36 @@ class UserAddressController extends Controller
         ]));
         return redirect()->route('user_address.index');
     }
+
+    /*
+     * 编辑页面
+     */
+    public function edit(UserAddress $user_address){
+        $this->authorize('own', $user_address);
+        return view('user_address.create_and_edit',['address'=>$user_address]);
+    }
+
+    public function update(UserAddress $user_address,UserAddressRequest $request){
+        $this->authorize('own', $user_address);
+        $user_address->update($request->only([
+            'province',
+            'city',
+            'district',
+            'address',
+            'zip',
+            'contact_name',
+            'contact_phone'
+        ]));
+        return redirect()->route('user_address.index');
+
+    }
+
+    public function destroy(UserAddress $user_address){
+        $this->authorize('own', $user_address);
+        $user_address->delete();
+
+        return [];
+    }
+
+
 }
