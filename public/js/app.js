@@ -49583,6 +49583,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 __webpack_require__(/*! ./components/SelectDistrict */ "./resources/js/components/SelectDistrict.js");
 
+__webpack_require__(/*! ./components/UserAddressesCreateAndEdit */ "./resources/js/components/UserAddressesCreateAndEdit.js");
+
 var app = new Vue({
   el: '#app'
 });
@@ -49781,6 +49783,35 @@ Vue.component('select-district', {
 
 /***/ }),
 
+/***/ "./resources/js/components/UserAddressesCreateAndEdit.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/UserAddressesCreateAndEdit.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 注册组件
+Vue.component('user-address-create-and-edit', {
+  data: function data() {
+    return {
+      province: '',
+      city: '',
+      district: ''
+    };
+  },
+  methods: {
+    onDistrictChanged: function onDistrictChanged(val) {
+      if (val.length === 3) {
+        this.province = val[0];
+        this.city = val[1];
+        this.district = val[2];
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49799,8 +49830,8 @@ Vue.component('select-district', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\phpstudy_pro\WWW\laravel-shop\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\phpstudy_pro\WWW\laravel-shop\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\WWW\laravel-shop\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\WWW\laravel-shop\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
