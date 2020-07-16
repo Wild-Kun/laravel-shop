@@ -40,14 +40,28 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    /*
+     * 一对多关联地址
+     */
     public function address(){
         return $this->hasMany(UserAddress::class);
     }
 
+    /*
+     * 多对多关联收藏
+     */
     public function favoriteProducts()
     {
         return $this->belongsToMany(Product::class, 'user_favorite_products')
             ->withTimestamps()
             ->orderBy('user_favorite_products.created_at', 'desc');
+    }
+
+    /*
+     * 一对多关联购物车
+     */
+    public function cartItems()
+    {
+        return $this->hasMany(CartItem::class);
     }
 }
