@@ -29,6 +29,10 @@ Route::group(['middleware'=>['auth','verified']],function (){
     Route::get('user_address/{user_address}', 'UserAddressController@edit')->name('user_address.edit');
     Route::put('user_address/{user_address}', 'UserAddressController@update')->name('user_address.update');
     Route::delete('user_address/{user_address}', 'UserAddressController@destroy')->name('user_address.destroy');
+
+    Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
+    Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
+    Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
 });
 
 
@@ -38,5 +42,4 @@ Route::get('products', 'ProductsController@index')->name('products.index');
 Route::get('products', 'ProductsController@index')->name('products.index');
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
 
-Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
-Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
+
