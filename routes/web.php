@@ -22,19 +22,23 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify'=>true]);
 
 Route::group(['middleware'=>['auth','verified']],function (){
+    // 地址
     Route::get('user_address','UserAddressController@index')->name('user_address.index');
     Route::get('user_address/create', 'UserAddressController@create')->name('user_address.create');
     Route::post('user_address', 'UserAddressController@store')->name('user_address.store');
-
     Route::get('user_address/{user_address}', 'UserAddressController@edit')->name('user_address.edit');
     Route::put('user_address/{user_address}', 'UserAddressController@update')->name('user_address.update');
     Route::delete('user_address/{user_address}', 'UserAddressController@destroy')->name('user_address.destroy');
 
+    // 收藏
     Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
     Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
     Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
 
+    // 购物车
     Route::post('cart', 'CartController@add')->name('cart.add');
+    Route::get('cart', 'CartController@index')->name('cart.index');
+    Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
 });
 
 
