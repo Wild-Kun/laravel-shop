@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/','PagesController@root')->name('root')->middleware('verified');
+//Route::get('/','PagesController@root')->name('root')->middleware('verified');
 
 Auth::routes(['verify'=>true]);
 
@@ -30,4 +30,8 @@ Route::group(['middleware'=>['auth','verified']],function (){
     Route::put('user_address/{user_address}', 'UserAddressController@update')->name('user_address.update');
     Route::delete('user_address/{user_address}', 'UserAddressController@destroy')->name('user_address.destroy');
 });
+
+
+Route::redirect('/', '/products')->name('root');
+Route::get('products', 'ProductsController@index')->name('products.index');
 
