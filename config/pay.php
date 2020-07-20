@@ -2,21 +2,16 @@
 
 return [
     'alipay' => [
-        'app_id'         => '2016102700769211',
+        'app_id' => '2016102700769211',
         'ali_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiLt/v7MwFsFTl19/537TY9NYai3FArofqxb2tc3aLjwAyzhdVdiQRTxouXN9MXgEClBPUnKjsE6SqnCKiGDHEmV/x1s0Br8LiXKNQ+nvLn1Q0BI3ogtPt2A08cpoTG7U5DfinBdJhxJPZLoBYr3OL0dNnBxe3KrBGeUyyF2dYBXb50PQI8QcGzHNlAUIcDwVeT1I23B6TrHWVvJHX4Mu6/a0mHzmIuYkGEAEexbCJtRd9z4YTmdKfCJeWkrEt8T5CuVKkMy2x2//0GIV0H5NonO4EMZQy1dRzY20C1/JSwRZIvzRvleJVTDQkxAiCRwjEA8bpBsVuBc4jcPsVZt5MwIDAQAB',
-        'private_key'    => 'MIIEowIBAAKCAQEAqmyLlBMkjmm5D31mOPmzYkHvBLVlQCva7fidbM02RZUSHdoDxS/PcNouJDYcw8mGaYcjp1A5QBIHLCobLaiHrkxwqIlljzctbraiobk9IjN2ztz+iV1yeEcw7syjT1plVq+3gV4nWs05qo9PBBNXQAkNshHshDtfR7lH6Fd7FD09Gc/xOttuhtFwnzRWSUGWyv07KJNddYUbTgEMTlut6JUw2JOz52Sqy/Tc77pQ0g12a7YBSfsXfIu9yUPJICTuaYGiB+sMWDvSFu2ognAHa5cImX7dxtabbuUHda2GkrNgGaCgHdP1EEuAH7376Lk6s3iFjDVntd/QjaWPhIPiHQIDAQABAoIBAQCAn0eAzCnM6fHnxOa/nYVLZSO11AnEstSawgZeNUr+nRF9QiuSSREwxRoJ7mUrRw+Q2ZOJFT0AJBsRs/2rKgStAbgNGxVxT12Ur3ZyxFFlXJ4QZi4dEk/wgxplQEEJBNpy4E+I7byaBUW+ekZSdx5kj/CsMmblLcItaaLhshSMIqQCwv6P8bPdM7zfF0THVTZzhLVk+iYjXhizOFx+2iMLk25CYjB159Asj5ea8RIzJ7YPzcCt5WVMn9URvx+13bl+qkOVEJg3vpCsWqFrzXPeHCT6D4Q2/IWe1HrLz/VTxZK/ytbXa5GnZE74pB7SJ0j3n79VWsvVdIOwkrXiVPeBAoGBAPd+LX4VCkjiwZclendJfhc4/VovLIfXuqtST3OjPT7An6k4m82twU5nX+H9FX/t1iJ5RmBq6zsJTHFiRG/fLzaknHv2Qv9u05aKY51B+hBPOtBt0GGQkaHLcOsq0FoIjseU2AGoQwvu8bAA2DihAyxyyO1E7hEoWQiWwFLKEbBxAoGBALBIMn4leVj9SFOGOtRK6iwVJ+ciilrHbuO0bej/zN2ol98QXyZkkwFcZS0+D3smWf+tzq7BHXJBWQXxUmvZnVSpuVcjU0lkouRINp+TEhYlgBzE+6SZuMCQd/aSC+eR3ESac4RaCiP2adsRSkcKmz1jXqRfnTT+C1BzvcvMuOJtAoGAcSq6BI/8Xu2I1eMmR4tMY7QEbQtrEkZ7rcD6YYcAB0Su/QLMg1TzMjWkq0I9ZXzMUIEhxA6/twP+d04WuwzTmunUP/6QDhqQF6L5/7tea7y+yPWdti8T2GadIHs4QCLvnqUZzFAzMC63RuJr/CDrwZRO+edt8FyBsaK1GGYbhpECgYAa4nfo6zgtjTtZmbAhLme2X2edhZQKMj5ENgFJNrH84DiBSZLpXQ9adsfrdXqQ8pFpQA20czlVcofsMxi54A9xmQzuMDIEkHeTTzwdbCWnAQMf4B7sxJD7tUzGaxGruIAaal/RwJWpVGxif6mPWhvA6gXGFdr4+QGqvGwmx8supQKBgCFMF3cTVOQK8RdoMNu73rPgHZsu7UUChuAR3UGQ2jsPQkoyPAIbpr85Os9lZl4XP251D8HDcRJK0otYBfV9QXtCMX27CpD5y580+ItvoTZSfFVPHmI3K87kLng8paGUwenmZU+T8HRQeAVHnGbzjgmubibQTq188z1WuHnf9aq8',
-        'log'            => [
+        'private_key' => 'MIIEowIBAAKCAQEAkSmEZVX7jY4Tr+pbn68Hku0VChxsgBE3J6NnZZkN19AVhMVeWA5Q1nZimhpWd2A6/Sc/6ME27fbMl7Ex1eVs1j8qMsGXfc5qQabgGxbMemvDmg2Y2BNNpq6lmSjfPxMJoqMV2BqvbxKauhsEKmh16He2QpMrnUmZXFTLzRENxPA80+2TKBpNRcdx7fjSCwaUAuGP3j3YSyIJM2+efOTozLjQc+snrD1a3I4i/gSiaNZSFR1fopLCmHzxv/N+LVmT4jpTtDvG/TuSlErgF79eCdX+NPBnRXd72bODF2AImeQOFjv5op/ixQ5TXOjvDwmER0eHHjOeacDGd2WQmy6WowIDAQABAoIBAAmZg0XoT8BmuuqRRwniW0/eGdwXUR2PBeS7K6VOX9n7ytCC9OBB4hqsrYyfXUR7uqrvI4zS6j0GazVE5JTOnUn112aP4uLQ+bnpvTxNX6xg4AiaCZeQfzwcpJriVxEmwyZcPp+R9DQWOOFB1B6x1cpP0F/Kt8GpEllGykt/azewycbmN/9jGH4LLBHbMbtKoC1zZ1eqazhJW7gEJxmXb6lTCAUNvnPFz89LNmM09sF0PDAjWbsULHVOPQmheHZXZLGyyDLyafvDRrzEmykYWiNi8+dnX8BkhkUORKaVCi8uu8hjZnPB5i6OyPR5PshFsK52vGuccsk1MFEt4urbUlECgYEA2VEZ1wq2jZuWxhptPW6T5ufC0oxYzfBuOhmqcWR26HlLQvVsE34Li61+8DIwQfoLSUWQtFfSxBtwVdO/OmzO5PUitpBtg0gVt2Y3DZWLXJpsRRFmC3JL6E5DZ7GjLLavZCxRLNBbG1kyVVtzr4i2X8M22p6qwl2GJlog38CVBIcCgYEAqwBn0vAyfkS7PNYRzpZIprjbHnt+F4s41FXoq0eIvnq56DehA1DK8BQQZgrVj20Up3HlKRTEgraKSP/I37PKptQUE2jg/ju/hWkvHakZO+2Edrm7yg8qtdQtfu+AkID7Exs6X7a46PHi33PNL15d9Gzx6ASfSCmHNJbRYnxugAUCgYB8Yl4e5mPco4xl8SRLgCophMfPCUOfBBmjKaOT6YPhxeMc/SoR8hgbp387bg6PBNZG5wlPH+FkG6xtg5g1kafOBr0Kr5nvBWhgo6GpJcoxg7Wqxq2YqZ/m5DzScitKYXn8JR2FP/CVs7UKhCCv/Nkd8LdJ5H0qaKtq8jVUvH7OqwKBgFeCM5+M8CoR/keZvS8dVTyMqQWmaNaflouDEzhjuSTRJUYjAbDyrYfCnMm7jaKCTemKrZ0iVZYW2BmXXDKujWxmZ4evSkSQSuh49XWWTaWPXRRs5B75OAAo/sdQxVgtyU7zxiGpHmOHNXToi/5LqoUlI356rxB8wAY3kBt4VgwJAoGBAIJVn+PcS7dmFVtfGJvqxGzIPvEOE3PDaW2F1Xduj+ihwOkDum0/RwnyXwi06w8hwp0Pb0BGqq/mzgGmQEczYWHmwKsIU94OLPdhvG+8NhWP1Hm7x6aSmBpF1nrAsnuYHq3UlTpvXomhFh+81gLQBUc8a0Vhb6NLbeXe9tNY+dWk',
+        'log' => [
             'file' => storage_path('logs/alipay.log'),
         ],
     ],
 
     'wechat' => [
-        'app_id'      => '',
-        'mch_id'      => '',
-        'key'         => '',
-        'cert_client' => '',
-        'cert_key'    => '',
-        'log'         => [
+        'app_id' => '', 'mch_id' => '', 'key' => '', 'cert_client' => '', 'cert_key' => '', 'log' => [
             'file' => storage_path('logs/wechat_pay.log'),
         ],
     ],
