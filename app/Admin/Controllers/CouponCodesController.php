@@ -31,26 +31,17 @@ class CouponCodesController extends AdminController
         $grid->id('ID')->sortable();
         $grid->name('名称');
         $grid->code('优惠码');
-        $grid->type('类型')->display(function($value) {
-            return CouponCode::$typeMap[$value];
+        $grid->column('description','描述');
+        $grid->column('usage', '用量')->display(function ($value) {
+            return "{$this->used} / {$this->total}";
         });
-        // 根据不同的折扣类型用对应的方式来展示
-        $grid->value('折扣')->display(function($value) {
-            return $this->type === CouponCode::TYPE_FIXED ? '￥'.$value : $value.'%';
-        });
-        $grid->min_amount('最低金额');
-        $grid->total('总量');
-        $grid->used('已用');
-        $grid->enabled('是否启用')->display(function($value) {
+        $grid->enabled('是否启用')->display(function ($value) {
             return $value ? '是' : '否';
         });
         $grid->created_at('创建时间');
-
         $grid->actions(function ($actions) {
             $actions->disableView();
         });
-
-
         return $grid;
     }
 
